@@ -19,7 +19,14 @@ Jest to relacja na/2.
 Definicja relacji na/2 składa się z 3
 klauzul, które są faktami.
 */
-% otwieranie tego 
+% input, debug, info...
 /*
-
+na(c,a). zwaraca true
+na(d,a). zwraca false
+na(X,c). wyzanczanie X=d
+na(c,X). X=a na jakim klocku lezy bezposrednio klocek c 
+jak kursor miga to istnieje jeszce inna odpowiedz wtedy ";" srednik klikamy
+na(_,c). zwraca true, czy na zmiennej c lezy jakis klocek
+na(a,_). false, czy na zmiennej a lezy jakis klocek
+na(X,a),na(X,b). X=c zwraca klocek na ktorym lezy bezposrednio na a i b
 */
