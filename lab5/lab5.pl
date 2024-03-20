@@ -78,6 +78,25 @@ st(W1*W2)=st(W1)+st(W2),st(W^N)=st(W)*N (N-liczba naturalna, N>1)
 	st_wielomian(X,X,1).
 	st_wielomian(c,_,0):-number(c).
 %rekurencja
-	st_wielomian(-W,X,X):-st_wielomian(W,X,X).
-		st_wielomian(W1+W2,X,X):-st_wielomaian()
-	
+	st_wielomian(-W,X,N):-st_wielomian(W,X,N).
+		st_wielomian(W1*W2,X,N):-st_wielomaian(W1,X,N1),st_wielomian(W2,X,N2),N is N1+N2.
+		st_wielomian(W1+W2,X,N):-st_wielomian(W1,X,N1),st_wielomian(W2,X,N2),N is max(N1,N2).
+		st_wielomian(W1-W2,X,N):-st_wielomian(W1,X,N1),st_wielomian(W2,X,N2),N is max(N1,N2).
+		st_wielomian(W^A,X,N):-integer(A),A>1,st_wielomian(W,X,N1),N is N1*A.
+
+/*
+sesja prolog:
+1 ?- st_wielomian(y,y,1).
+true.
+2 ?-st_wielomian(x,x,N).
+N=1.
+3 ?-st_wielomian(x^2,x,N).
+N=2.
+4 ?-st_wielomian(3*x*x,x,N).
+N=2.
+5 ?-st_wielomian(5*x^2+x+1,x,N).
+N=2.
+cos nie dziala z mnozeniem xppp
+6 ?-st_wielomian(x^5+2x+1,x,N).
+N=5.
+*/
