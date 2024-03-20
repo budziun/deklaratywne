@@ -73,3 +73,11 @@ st(W1*W2)=st(W1)+st(W2),st(W^N)=st(W)*N (N-liczba naturalna, N>1)
 % st_wielomian(W,X,N)
 % spełniony, gdy N jest stopniem wielomianu W
 % zmiennej X o współczynnikach liczbowych
+
+%warunki zakonczenia rekurencji 
+	st_wielomian(X,X,1).
+	st_wielomian(c,_,0):-number(c).
+%rekurencja
+	st_wielomian(-W,X,X):-st_wielomian(W,X,X).
+		st_wielomian(W1+W2,X,X):-st_wielomaian()
+	
