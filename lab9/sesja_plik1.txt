@@ -1,0 +1,22 @@
+Main> razy_dwa (-4)
+-8
+Main> razy_dwa 0.8
+1.6
+Main> kwadrat 5
+25
+
+na kolos zdefiniowiac typ szczegolowy i typ ogolny programu
+
+Main> sum_kw 5 10
+125
+Main> pierwszy_wk 3 1
+True
+Main> pierwszy_wk 3 3
+False
+
+Main> pole_prostopad 2 4 8
+112
+Main> pole_prostopad2 2 4 8
+112
+Main> pole_prostopad3 2 4 8
+112
