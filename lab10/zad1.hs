@@ -43,12 +43,16 @@ albo_albo4::Bool->Bool->Bool
 albo_albo4 p q = not p && q || p && not q
 
 --implikacja logiczna jakas
---raczej do zrobienia
---implikacja::Bool->Bool->Bool
---implikacja p q = 
---		 if p==False then True
---		 else if q=True then True
---		 else False
+implikacja::Bool->Bool->Bool
+implikacja p q = 
+		 if p==False then True
+		 else if q==True then True
+		 else False
+
+--implikacja ze straznikami 
+imp1 p q
+ |p==True  && q==False = False 
+ |otherwise = False
 
 
 
