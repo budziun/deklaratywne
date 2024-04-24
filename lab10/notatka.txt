@@ -1,0 +1,68 @@
+Int,Integer - typ całkowity
+Float,Double - typ rzeczywisty
+Char - typ znakowy
+Bool - typ boolowski
+String - typ listy znaków [Char]
+
+Typ fukncji:::
+
+nazwa_funkcji::TypParam_1->TypParam_2->...->TypParam_m-> Typ funkcji (np. Int)
+
+if<warunek>then<true-value>else<flase-value>
+
+case<wyrazenie>of
+	<wzorzec_1>-><wartość_1>
+	<wzorzec_2>-><wartość_2>
+	...
+	<wzorzec_n>-><wartość_n>
+
+guard - straznicy
+<warunek_1>=<wartość_1>
+<warunek_2>=<wartość_2>
+...
+<warunek_n>=<wartość_n>
+lub na koncu
+otherwise = <wartość_n>
+
+Sesja haskwel
+program abs:
+Main> abs 6
+6.0
+Main> abs (-5)
+5.0
+Main> abs 0
+0.0
+
+program min liczby:
+Main> minimum 2 5
+2.0
+Main> minimum 5 (-1)
+-1.0
+Main> minimum 5 5
+5.0
+Main>
+
+Main> minimum2 5 2
+2
+
+signum funckja:
+Main> sgn 5
+1.0
+Main> sgn (-5)
+-1.0
+Main> sgn 0
+0.0
+
+program albo_albo1:::
+
+Main> albo_albo1 (True,True)
+False
+Main> albo_albo1 (False,True)
+True
+
+Main> albo_albo True True
+False
+
+Main> albo_albo3 True True
+False
+
