@@ -53,12 +53,12 @@ kwadrat_listy xs=map kwadrat xs
 mniejszao3 x=x-3
 lista_mniejszao3_1::[Int]->[Int]
 lista_mniejszao3_1[]=[]
--- lista_mniejszao3_1(x*xs)=(mniejszao3 x):(lista_mniejszao3_1 xs)
+lista_mniejszao3_1(x:xs)=(mniejszao3 x):(lista_mniejszao3_1 xs)
 -- jakis blad pewnie w tym x*xs bo nic nie widac na tablicy
 
 -- kwalifikator
 lista_mniejszao3_2::[Int]->[Int]
-lista_mniejsza3_2 xs[x-3|x<-xs]
+lista_mniejszao3_2 xs[x-3|x<-xs]
 
 -- map
 mniejo3_3 x=x-3
